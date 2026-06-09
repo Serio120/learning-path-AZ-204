@@ -35,9 +35,9 @@ Select the + Create a resource located in the Azure Services heading near the to
 
 In the Search the Marketplace search bar, enter web app and press enter to start searching.
 
-In the Web App tile, select the Create drop-down and then select Web App.
+  9. In the Web App tile, select the Create drop-down and then select Web App.
 
-Screenshot of the Web App tile.
+<img width="211" height="362" alt="image" src="https://github.com/user-attachments/assets/ff4f83f3-50ed-4a47-901b-2db59f759465" />
 
 Selecting Create will open a template with a few tabs to fill out with information about your deployment. The following steps walk you through what changes to make in the relevant tabs.
 
