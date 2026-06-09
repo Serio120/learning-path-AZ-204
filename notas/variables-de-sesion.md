@@ -41,11 +41,9 @@ az storage account create --name $storageName --resource-group $resourceGroup --
 Si quieres que un valor se use por defecto en toda la sesión de Azure CLI:
 Bashaz configure --defaults group=$resourceGroup location=$location
 
+Así, no tendrás que pasar --resource-group ni --location en cada comando.
+
 ### Mas ...
 https://learn.microsoft.com/es-es/cli/azure/azure-cli-variables?view=azure-cli-latest&tabs=bash
 
 
-Así, no tendrás que pasar --resource-group ni --location en cada comando.
-
-Si quieres, puedo prepararte un script completo que configure variables de sesión y cree recursos en Azure de forma automatizada.
-¿Quieres que te lo haga para Bash o PowerShell?
