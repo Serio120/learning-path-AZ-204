@@ -105,21 +105,21 @@ With Core Tools running, go to the Azure: Functions area. Under Functions, expan
 
 Screenshot showing the location of the Execute Function Now... step.
 
-In Enter request body you see the request message body value of { "name": "Azure" }. Press Enter to send this request message to your function. When the function executes locally and returns a response, a notification is raised in Visual Studio Code.
+  6. In Enter request body you see the request message body value of { "name": "Azure" }. Press Enter to send this request   message to your function. When the function executes locally and returns a response, a notification is raised in Visual   Studio Code.
 
-Select the notification bell icon to view the notification. Information about the function execution is shown in Terminal panel.
+  Select the notification bell icon to view the notification. Information about the function execution is shown in Terminal panel.
 
-Press Shift + F5 to stop Core Tools and disconnect the debugger.
+  7. Press Shift + F5 to stop Core Tools and disconnect the debugger.
 
-After verifying that the function runs correctly on your local computer, it's time to use Visual Studio Code to publish the project directly to Azure.
+> After verifying that the function runs correctly on your local computer, it's time to use Visual Studio Code to publish the project directly to Azure.
 
-Deploy and execute the function in Azure
+# Deploy and execute the function in Azure
 
-In this section you create an Azure Function App resource and deploy the function to the resource.
+> In this section you create an Azure Function App resource and deploy the function to the resource.
 
-Sign in to Azure
+## Sign in to Azure
 
-Before you can publish your app, you must sign in to Azure. If you already signed in, go to the next section.
+> Before you can publish your app, you must sign in to Azure. If you already signed in, go to the next section.
 
   1. If you aren't already signed in, choose the Azure icon in the Activity bar, then in the Azure: Functions area, choose **Sign in to Azure....**
 
