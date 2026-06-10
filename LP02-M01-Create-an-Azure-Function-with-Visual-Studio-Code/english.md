@@ -96,18 +96,29 @@ Screenshot of the endpoint of your HTTP-triggered function is displayed in the T
 
 NOTE: You may run into a NU1100 Error. If so follow these steps
 
-Enter the following command into the terminal:
+  4. Enter the following command into the terminal:
 
+```powershell
 dotnet nuget add source https://api.nuget.org/v3/index.json --name nuget.org
+```
+
+```powershell
 dotnet nuget locals all --clear
+```
+
+```powershell
 dotnet restore
+```
+
 With Core Tools running, go to the Azure: Functions area. Under Functions, expand Local Project > Functions. Right-click the HttpExample function and select Execute Function Now....
 
-Screenshot showing the location of the Execute Function Now... step.
+<img width="389" height="304" alt="image" src="https://github.com/user-attachments/assets/ba8f356a-b6a6-4356-8210-b0af82c90f91" />
 
-  6. In Enter request body you see the request message body value of { "name": "Azure" }. Press Enter to send this request   message to your function. When the function executes locally and returns a response, a notification is raised in Visual   Studio Code.
+  6. In Enter request body you see the request message body value of { "name": "Azure" }. Press Enter to send this request   message to your function. When the function executes locally and returns a response, a notification is raised in Visual
+  Studio Code.
 
-  Select the notification bell icon to view the notification. Information about the function execution is shown in Terminal panel.
+  Select the notification bell icon to view the notification. Information about the function execution is shown in 
+  Terminal panel.
 
   7. Press Shift + F5 to stop Core Tools and disconnect the debugger.
 
