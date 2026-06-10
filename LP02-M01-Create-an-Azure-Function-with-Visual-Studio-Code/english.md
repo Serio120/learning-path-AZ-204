@@ -59,17 +59,19 @@ In Visual Studio Code, press F1 to open the command palette and search for and r
 
 Select the directory location for your project workspace and choose Select. You should either create a new folder or choose an empty folder for the project workspace. Don't choose a project folder that is already part of a workspace.
 
-Provide the following information at the prompts:
+  9. Provide the following information at the prompts:
 
-**Prompt**	**Action**
-Select the folder that will contain your function projects	Select Browse... to select a folder for your app.
-Select a language	Select C#.
-Select a .NET runtime	Select .NET 8.0 Isolated
-Select a template for your project's first function	Select HTTP trigger.1
-Provide a function name	Enter HttpExample.
-Provide a namespace	Enter My.Function.
-Authorization level	Select Anonymous, which enables anyone to call your function endpoint.
-Depending on your VS Code settings, you might need to use the Change template filter option to see the full list of templates.
+| **Steph** | **Prompt** | 	**Action** |
+|------|--------|-------------|
+| 1 | Select the folder that will contain your function projects | Select **Browse...** to select a folder for your app. |
+| 2 | Select a language | Select **C#**. |
+| 3 | Select a .NET runtime | Select **.NET 8.0 Isolated**. |
+| 4 | Select a template for your project's first function | Select **HTTP trigger**. |
+| 5 | Provide a function name | Enter **HttpExample**. |
+| 6 | Provide a namespace | Enter **My.Function**. |
+| 7 | Authorization level | Select **Anonymous**, which enables anyone to call your function endpoint. |
+
+> ⚠️ Depending on your VS Code settings, you might need to use the **Change template filter** option to see the full list of templates.
 
   10. When prompted to Select how you would like to open your project select Open in current window.
 
