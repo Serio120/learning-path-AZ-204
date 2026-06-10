@@ -3,35 +3,37 @@ Create an Azure Function with Visual Studio Code
 
 In this exercise, you learn how to create a C# function that responds to HTTP requests. After creating and testing the code locally in Visual Studio Code, you deploy and test the function in Azure.
 
-
-
 Tasks performed in this exercise:
 
-## Create your local project
-Run the function locally
-Deploy and execute the function in Azure
-Clean up resources
-This exercise takes approximately 15 minutes to complete.
+- Create your local project
+- Run the function locally
+- Deploy and execute the function in Azure
+- Clean up resources
 
-Before you start
+>This exercise takes approximately 15 minutes to complete.
 
-To complete the exercise, you need:
+# Before you start
 
-An Azure subscription. If you don't already have one, you can sign up for one here: https://azure.microsoft.com/.
+> To complete the exercise, you need:
 
-Visual Studio Codeon one of the supported platforms found here: https://code.visualstudio.com/docs/supporting/requirements#_platforms.
+>  - An Azure subscription. If you don't already have one, you can sign up for one here: https://azure.microsoft.com/.
 
-.NET 8 found here: https://dotnet.microsoft.com/en-us/download/dotnet/8.0 is the target framework.
+>  - Visual Studio Codeon one of the supported platforms found here: https://code.visualstudio.com/docs/supporting/requirements#_platforms.
 
-C# Dev Kit found here here https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit for Visual Studio Code.
+>  - .NET 8 found here: https://dotnet.microsoft.com/en-us/download/dotnet/8.0 is the target framework.
 
-Azure Functions extension found here https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions for Visual Studio Code.
+>  - C# Dev Kit found here here https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit for Visual Studio Code.
 
-Azure Functions Core Tools version 4.x. Run the following commands in a terminal to install Azure Functions Core Tools on your system. Visit Azure Function Core Tools on GitHub found here: https://github.com/Azure/azure-functions-core-tools?tab=readme-ov-file#installing for installation instructions on other platforms.
+>  - Azure Functions extension found here https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions for Visual Studio Code.
 
+>  - Azure Functions Core Tools version 4.x. Run the following commands in a terminal to install Azure Functions Core Tools on your system. Visit Azure Function Core Tools on GitHub found here: https://github.com/Azure/azure-functions-core-tools?tab=readme-ov-file#installing for installation instructions on other platforms.
+
+```poweshell
 winget uninstall Microsoft.Azure.FunctionsCoreTools
 winget install Microsoft.Azure.FunctionsCoreTools
-NOTE: If you encounter any errors installing Azure Function Core Tools, search for a solution based on the error code. Then retry the winget install command in the previous step.
+```
+
+> NOTE: If you encounter any errors installing Azure Function Core Tools, search for a solution based on the error code. Then retry the winget install command in the previous step.
 
 Create your local project
 
