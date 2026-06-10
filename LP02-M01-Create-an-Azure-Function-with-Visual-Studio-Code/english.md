@@ -121,25 +121,25 @@ Sign in to Azure
 
 Before you can publish your app, you must sign in to Azure. If you already signed in, go to the next section.
 
-If you aren't already signed in, choose the Azure icon in the Activity bar, then in the Azure: Functions area, choose Sign in to Azure....
+  1. If you aren't already signed in, choose the Azure icon in the Activity bar, then in the Azure: Functions area, choose **Sign in to Azure....**
 
-Screenshot of the Sign in to Azure button.
+<img width="390" height="215" alt="image" src="https://github.com/user-attachments/assets/109e1095-f3d0-4a16-b7e9-54e9a7cf2780" />
 
-When prompted in the browser, choose your Azure account and sign in using your Azure account credentials.
+  2. When prompted in the browser, choose your Azure account and sign in using your Azure account credentials.
 
-After successfully signing in, you can close the new browser window. The subscriptions that belong to your Azure account are displayed in the Side bar.
+  3. After successfully signing in, you can close the new browser window. The subscriptions that belong to your Azure account are displayed in the Side bar.
 
-Create resources in Azure
+## Create resources in Azure
 
-In this section, you create the Azure resources you need to deploy your local function app.
+> In this section, you create the Azure resources you need to deploy your local function app.
 
-Open the drop-down menu for your Subscription CloudShare8G.
+  1. Open the drop-down menu for your Subscription CloudShare8G.
 
-Right-click Function app and select Create Function App in Azure (Advanced).
+  2. Right-click Function app and select Create Function App in Azure (Advanced).
 
-Provide the following information at the prompts or accept defaults:
+  3. Provide the following information at the prompts or accept defaults:
 
-Prompt	Action
+**Prompt**	**Action**
 Enter a globally unique name for the function app	Type a name that is valid in a URL path, for example myfunctionapp. The name you type is validated to make sure that it's unique.
 Select a location for new resources	For better performance, select a region near you.
 Select a hosting plan	Flex consumption
@@ -148,6 +148,7 @@ Select a runtime stack	Select .NET 8.0 Isolated.
 Maximum Instance count	40
 Resource group	LP2-Functions-KZFTN15SCL
 Select resource authentication type	Select Secrets
+
 The extension shows the status of individual resources as they're being created in the AZURE area of the terminal window.
 
   4. When completed, the following Azure resources are created in your subscription, using names based on your function app name:
