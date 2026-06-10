@@ -150,21 +150,21 @@ Resource group	LP2-Functions-KZFTN15SCL
 Select resource authentication type	Select Secrets
 The extension shows the status of individual resources as they're being created in the AZURE area of the terminal window.
 
-When completed, the following Azure resources are created in your subscription, using names based on your function app name:
+  4. When completed, the following Azure resources are created in your subscription, using names based on your function app name:
 
-A resource group, which is a logical container for related resources.
-A standard Azure Storage account, which maintains state and other information about your projects.
-A Flex consumption plan, which defines the underlying host for your serverless function app.
-A function app, which provides the environment for executing your function code. A function app lets you group functions as a logical unit for easier management, deployment, and sharing of resources within the same hosting plan.
-An Application Insights instance connected to the function app, which tracks usage of your serverless function.
+  - A resource group, which is a logical container for related resources.
+  - A standard Azure Storage account, which maintains state and other information about your projects.
+  - A Flex consumption plan, which defines the underlying host for your serverless function app.
+  - A function app, which provides the environment for executing your function code. A function app lets you group functions as a logical unit for easier management, deployment, and sharing of resources within the same hosting plan.
+  - An Application Insights instance connected to the function app, which tracks usage of your serverless function.
 
 ## Deploy the project to Azure
 
-Important: Publishing to an existing function overwrites any previous deployments.
+> Important: Publishing to an existing function overwrites any previous deployments.
 
-In the command palette, search for and run the command Azure Functions: Deploy to Function App....
+  1. In the command palette, search for and run the command Azure Functions: Deploy to Function App....
 
-Select the subscription you used when creating the resources.
+  2. Select the subscription you used when creating the resources.
 
   3. Select the function app you created. When prompted about overwriting previous deployments, select Deploy to deploy your function code to the new function app resource.
 
