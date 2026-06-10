@@ -169,7 +169,7 @@ Select the function app you created. When prompted about overwriting previous de
 
 After deployment completes, select View Output to view the details of the deployment results. If you miss the notification, select the notification bell icon in the lower right corner to see it again.
 
-Screenshot of the View Output button.
+<img width="600" height="166" alt="image" src="https://github.com/user-attachments/assets/b9342814-81fc-4028-998c-f9314ec432eb" />
 
 Run the function in Azure
 
