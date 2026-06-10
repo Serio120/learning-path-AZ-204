@@ -166,30 +166,30 @@ In the command palette, search for and run the command Azure Functions: Deploy t
 
 Select the subscription you used when creating the resources.
 
-Select the function app you created. When prompted about overwriting previous deployments, select Deploy to deploy your function code to the new function app resource.
+  3. Select the function app you created. When prompted about overwriting previous deployments, select Deploy to deploy your function code to the new function app resource.
 
-After deployment completes, select View Output to view the details of the deployment results. If you miss the notification, select the notification bell icon in the lower right corner to see it again.
+  4. After deployment completes, select View Output to view the details of the deployment results. If you miss the notification, select the notification bell icon in the lower right corner to see it again.
 
 <img width="600" height="166" alt="image" src="https://github.com/user-attachments/assets/b9342814-81fc-4028-998c-f9314ec432eb" />
 
 ## Run the function in Azure
 
-Back in the Resources area in the side bar, expand your subscription, your new function app, and Functions. Right-click the HttpExample function and choose **Execute Function Now....**
+  1. Back in the Resources area in the side bar, expand your subscription, your new function app, and Functions. Right-click the HttpExample function and choose **Execute Function Now....**
 
 <img width="392" height="473" alt="image" src="https://github.com/user-attachments/assets/775f16b5-8cbc-490d-8161-257536a091fc" />
 
-In Enter request body you see the request message body value of { "name": "Azure" }. Press Enter to send this request message to your function.
+  2. In Enter request body you see the request message body value of { "name": "Azure" }. Press Enter to send this request message to your function.
 
-When the function executes in Azure and returns a response, a notification is raised in Visual Studio Code. select the notification bell icon to view the notification.
+  3. When the function executes in Azure and returns a response, a notification is raised in Visual Studio Code. select the notification bell icon to view the notification.
 
-Clean up resources
+## Clean up resources
 
 > Now that you finished the exercise, you should delete the cloud resources you created to avoid unnecessary resource usage.
 
-- 1. In your browser navigate to the Azure portal https://portal.azure.com; signing in with your Azure credentials if prompted.
+  1. In your browser navigate to the Azure portal https://portal.azure.com; signing in with your Azure credentials if prompted.
 
-- 2. Navigate to the resource group you created and view the contents of the resources used in this exercise.
+  2. Navigate to the resource group you created and view the contents of the resources used in this exercise.
 
-- 3. On the toolbar, select Delete resource group.
+  3. On the toolbar, select Delete resource group.
 
-- 4. Enter the resource group name and confirm that you want to delete it.
+  4. Enter the resource group name and confirm that you want to delete it.
