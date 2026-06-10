@@ -83,9 +83,9 @@ Visual Studio Code integrates with Azure Functions Core tools to let you run thi
 
 Make sure the terminal is open in Visual Studio Code. You can open the terminal by selecting Terminal and then New Terminal in the menu bar.
 
-Press F5 to start the function app project in the debugger. If you are prompted to choose a storage account select Skip for now.
+Press F5 to start the function app project in the debugger. If you are prompted to choose a storage account select **Skip for now**.
 
-Screenshot
+<img width="578" height="125" alt="image" src="https://github.com/user-attachments/assets/3dadba76-277b-413a-94b6-c9ca98a71fbd" />
 
 Output from Core Tools is displayed in the Terminal panel. You can see the URL endpoint of your HTTP-triggered function running locally.
 
