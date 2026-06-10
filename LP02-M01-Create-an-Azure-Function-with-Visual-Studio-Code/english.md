@@ -157,7 +157,8 @@ A standard Azure Storage account, which maintains state and other information ab
 A Flex consumption plan, which defines the underlying host for your serverless function app.
 A function app, which provides the environment for executing your function code. A function app lets you group functions as a logical unit for easier management, deployment, and sharing of resources within the same hosting plan.
 An Application Insights instance connected to the function app, which tracks usage of your serverless function.
-Deploy the project to Azure
+
+## Deploy the project to Azure
 
 Important: Publishing to an existing function overwrites any previous deployments.
 
@@ -183,12 +184,12 @@ When the function executes in Azure and returns a response, a notification is ra
 
 Clean up resources
 
-Now that you finished the exercise, you should delete the cloud resources you created to avoid unnecessary resource usage.
+> Now that you finished the exercise, you should delete the cloud resources you created to avoid unnecessary resource usage.
 
-In your browser navigate to the Azure portal https://portal.azure.com; signing in with your Azure credentials if prompted.
+- 1. In your browser navigate to the Azure portal https://portal.azure.com; signing in with your Azure credentials if prompted.
 
-Navigate to the resource group you created and view the contents of the resources used in this exercise.
+- 2. Navigate to the resource group you created and view the contents of the resources used in this exercise.
 
-On the toolbar, select Delete resource group.
+- 3. On the toolbar, select Delete resource group.
 
-Enter the resource group name and confirm that you want to delete it.
+- 4. Enter the resource group name and confirm that you want to delete it.
