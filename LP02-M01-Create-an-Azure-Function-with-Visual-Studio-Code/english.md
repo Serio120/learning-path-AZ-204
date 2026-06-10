@@ -1,5 +1,4 @@
 # LP02 M01: Create an Azure Function with Visual Studio Code
-Create an Azure Function with Visual Studio Code
 
 In this exercise, you learn how to create a C# function that responds to HTTP requests. After creating and testing the code locally in Visual Studio Code, you deploy and test the function in Azure.
 
