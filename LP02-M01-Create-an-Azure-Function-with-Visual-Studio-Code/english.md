@@ -171,7 +171,7 @@ After deployment completes, select View Output to view the details of the deploy
 
 <img width="600" height="166" alt="image" src="https://github.com/user-attachments/assets/b9342814-81fc-4028-998c-f9314ec432eb" />
 
-Run the function in Azure
+## Run the function in Azure
 
 Back in the Resources area in the side bar, expand your subscription, your new function app, and Functions. Right-click the HttpExample function and choose Execute Function Now....
 
