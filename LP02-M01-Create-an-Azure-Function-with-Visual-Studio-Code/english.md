@@ -173,9 +173,9 @@ After deployment completes, select View Output to view the details of the deploy
 
 ## Run the function in Azure
 
-Back in the Resources area in the side bar, expand your subscription, your new function app, and Functions. Right-click the HttpExample function and choose Execute Function Now....
+Back in the Resources area in the side bar, expand your subscription, your new function app, and Functions. Right-click the HttpExample function and choose **Execute Function Now....**
 
-Screenshot of the Execute Function Now option.
+<img width="392" height="473" alt="image" src="https://github.com/user-attachments/assets/775f16b5-8cbc-490d-8161-257536a091fc" />
 
 In Enter request body you see the request message body value of { "name": "Azure" }. Press Enter to send this request message to your function.
 
