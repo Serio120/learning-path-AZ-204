@@ -89,6 +89,9 @@ Press F5 to start the function app project in the debugger. If you are prompted 
 
 Output from Core Tools is displayed in the Terminal panel. You can see the URL endpoint of your HTTP-triggered function running locally.
 
+<img width="766" height="124" alt="image" src="https://github.com/user-attachments/assets/42a5922d-9e96-4713-954c-aa7cd4ac6422" />
+
+
 Screenshot of the endpoint of your HTTP-triggered function is displayed in the Terminal panel.
 
 NOTE: You may run into a NU1100 Error. If so follow these steps
