@@ -61,7 +61,7 @@ Select the directory location for your project workspace and choose Select. You 
 
 Provide the following information at the prompts:
 
-Prompt	Action
+**Prompt**	**Action**
 Select the folder that will contain your function projects	Select Browse... to select a folder for your app.
 Select a language	Select C#.
 Select a .NET runtime	Select .NET 8.0 Isolated
@@ -71,30 +71,27 @@ Provide a namespace	Enter My.Function.
 Authorization level	Select Anonymous, which enables anyone to call your function endpoint.
 Depending on your VS Code settings, you might need to use the Change template filter option to see the full list of templates.
 
-When prompted to Select how you would like to open your project select Open in current window.
+  10. When prompted to Select how you would like to open your project select Open in current window.
 
-Visual Studio Code uses the provided information and generates an Azure Functions project with an HTTP trigger. You can view the local project files in the Explorer.
+  11. Visual Studio Code uses the provided information and generates an Azure Functions project with an HTTP trigger. You can view the local project files in the Explorer.
 
-Note: If VS Code displays a popup with the title Do you trust the authors of the files in this folder?, select the Yes, I trust the authors button.
+> Note: If VS Code displays a popup with the title Do you trust the authors of the files in this folder?, select the Yes, I trust the authors button.
 
-Run the function locally
+# Run the function locally
 
-Visual Studio Code integrates with Azure Functions Core tools to let you run this project on your local development computer before you publish to Azure.
+> Visual Studio Code integrates with Azure Functions Core tools to let you run this project on your local development computer before you publish to Azure.
 
-Make sure the terminal is open in Visual Studio Code. You can open the terminal by selecting Terminal and then New Terminal in the menu bar.
+  1. Make sure the terminal is open in Visual Studio Code. You can open the terminal by selecting Terminal and then New Terminal in the menu bar.
 
-Press F5 to start the function app project in the debugger. If you are prompted to choose a storage account select **Skip for now**.
+  2: Press F5 to start the function app project in the debugger. If you are prompted to choose a storage account select **Skip for now**.
 
 <img width="578" height="125" alt="image" src="https://github.com/user-attachments/assets/3dadba76-277b-413a-94b6-c9ca98a71fbd" />
 
-Output from Core Tools is displayed in the Terminal panel. You can see the URL endpoint of your HTTP-triggered function running locally.
+  3. Output from Core Tools is displayed in the Terminal panel. You can see the URL endpoint of your HTTP-triggered function running locally.
 
 <img width="766" height="124" alt="image" src="https://github.com/user-attachments/assets/42a5922d-9e96-4713-954c-aa7cd4ac6422" />
 
-
-Screenshot of the endpoint of your HTTP-triggered function is displayed in the Terminal panel.
-
-NOTE: You may run into a NU1100 Error. If so follow these steps
+> NOTE: You may run into a NU1100 Error. If so follow these steps
 
   4. Enter the following command into the terminal:
 
