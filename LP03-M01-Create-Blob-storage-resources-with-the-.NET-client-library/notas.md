@@ -205,8 +205,42 @@ Si necesitas algo más específico, indícame:
 [11] [https://help.ubuntu.com](https://help.ubuntu.com/stable/ubuntu-help/files-rename.html.es)
 [12] [https://docs.github.com](https://docs.github.com/es/enterprise-cloud@latest/repositories/working-with-files/managing-files/renaming-a-file)
 
-
 ---
 
-# ¿Quieres que revisemos juntos los errores que te aparecían antes de corregirlo?
-Puedo explicarte cada uno para que entiendas qué fallaba exactamente.
+Para editar código en un archivo .cs (C#) directamente desde Azure Cloud Shell, la herramienta oficial, más rápida y visual es el editor integrado basado en Monaco (el motor de Visual Studio Code). [1] 
+Aquí tienes los pasos exactos y las alternativas disponibles:
+## Opción 1: El editor integrado (Recomendado)
+Es una interfaz gráfica ligera que se abre dentro de la misma ventana del Cloud Shell. [2] 
+
+   1. Abre el archivo ejecutando el comando code seguido del nombre del archivo:
+   
+   code archivo.cs
+   
+   2. Se abrirá una ventana de edición sobre la terminal con resaltado de sintaxis para C#.
+   3. Modifica tu código directamente.
+   4. Para guardar los cambios, presiona Ctrl + S (Windows/Linux) o Cmd + S (macOS).
+   5. Para cerrar el editor y volver a la consola, presiona Ctrl + Q o haz clic en los tres puntos ... de la esquina superior derecha y selecciona Close Editor. [3] 
+
+## Opción 2: Editores de terminal clásicos (Solo en entorno Bash)
+Si estás utilizando el entorno Bash de Cloud Shell, también tienes a tu disposición los editores de texto tradicionales de la consola de Linux:
+
+* Nano (El más sencillo si no usas el editor gráfico):
+
+nano archivo.cs
+
+Modificas el texto, guardas con Ctrl + O -> Enter, y sales con Ctrl + X.
+* Vim (Para usuarios avanzados):
+
+vim archivo.cs
+
+
+Para ayudarte mejor con tu desarrollo, dime:
+
+* ¿Estás intentando compilar y ejecutar el archivo .cs en Cloud Shell?
+* ¿Estás trabajando en un proyecto completo de .NET Core o es un script suelto?
+
+
+[1] [https://ingenieriadesoftware.es](https://ingenieriadesoftware.es/editor-codigo-online-programa-ide-navegador/)
+[2] [https://azure.microsoft.com](https://azure.microsoft.com/es-es/get-started/azure-portal/cloud-shell)
+[3] [https://learn.microsoft.com](https://learn.microsoft.com/es-es/azure/cloud-shell/use-cloud-shell-editor-new)
+
