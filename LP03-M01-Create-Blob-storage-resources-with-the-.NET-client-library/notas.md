@@ -169,12 +169,16 @@ Para renombrar un archivo en Azure Cloud Shell, el comando exacto depende del en
 ## Si usas el entorno Bash (Linux)
 En Bash debes emplear el comando mv (move), especificando primero el nombre actual del archivo y después el nuevo nombre. [2, 3, 4] 
 
+```bash
 mv nombre_actual.txt nuevo_nombre.txt
+```
 
 ## Si usas el entorno PowerShell
 En PowerShell debes utilizar el cmdlet Rename-Item, o en su defecto el alias estándar ren o move. [5, 6] 
 
+```powershell
 Rename-Item -Path "nombre_actual.txt" -NewName "nuevo_nombre.txt"
+```
 
 (O de forma abreviada: ren nombre_actual.txt nuevo_nombre.txt)
 ------------------------------
@@ -214,7 +218,9 @@ Es una interfaz gráfica ligera que se abre dentro de la misma ventana del Cloud
 
    1. Abre el archivo ejecutando el comando code seguido del nombre del archivo:
    
-   code archivo.cs
+```
+code archivo.cs
+```
    
    2. Se abrirá una ventana de edición sobre la terminal con resaltado de sintaxis para C#.
    3. Modifica tu código directamente.
@@ -226,13 +232,16 @@ Si estás utilizando el entorno Bash de Cloud Shell, también tienes a tu dispos
 
 * Nano (El más sencillo si no usas el editor gráfico):
 
+```
 nano archivo.cs
+```
 
 Modificas el texto, guardas con Ctrl + O -> Enter, y sales con Ctrl + X.
 * Vim (Para usuarios avanzados):
 
+```
 vim archivo.cs
-
+```
 
 Para ayudarte mejor con tu desarrollo, dime:
 
