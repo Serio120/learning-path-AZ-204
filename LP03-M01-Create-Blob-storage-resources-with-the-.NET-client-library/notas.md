@@ -34,49 +34,7 @@ else
 {
 }
 ```
-
 ---
-
-Para renombrar un archivo en Azure Cloud Shell, el comando exacto depende del entorno que tengas seleccionado en la barra de herramientas de tu consola: Bash (Linux) o PowerShell (Windows). [1] 
-## Si usas el entorno Bash (Linux)
-En Bash debes emplear el comando mv (move), especificando primero el nombre actual del archivo y después el nuevo nombre. [2, 3, 4] 
-
-mv nombre_actual.txt nuevo_nombre.txt
-
-## Si usas el entorno PowerShell
-En PowerShell debes utilizar el cmdlet Rename-Item, o en su defecto el alias estándar ren o move. [5, 6] 
-
-Rename-Item -Path "nombre_actual.txt" -NewName "nuevo_nombre.txt"
-
-(O de forma abreviada: ren nombre_actual.txt nuevo_nombre.txt)
-------------------------------
-## Cómo renombrar desde el editor gráfico de Cloud Shell
-Si prefieres no utilizar comandos de consola, Azure Cloud Shell incluye un editor gráfico integrado: [7, 8] 
-
-   1. Escribe el comando code . en la terminal para desplegar el editor en pantalla.
-   2. En la barra lateral izquierda aparecerá el explorador de archivos.
-   3. Haz clic derecho sobre el archivo que quieres modificar.
-   4. Selecciona la opción Rename (Renombrar), escribe el nuevo nombre y presiona Enter. [7, 9, 10, 11, 12] 
-
-Si necesitas algo más específico, indícame:
-
-* ¿Estás intentando renombrar un archivo local del directorio personal u un objeto dentro de un Azure Storage Account?
-* ¿Te ha aparecido algún mensaje de error al intentar cambiarlo?
-
-
-[1] [https://learn.microsoft.com](https://learn.microsoft.com/es-es/azure/cloud-shell/use-the-shell-window-new)
-[2] [https://www.manageengine.com](https://www.manageengine.com/products/eventlog/kb/linux/how-to-rename-files-in-linux.html)
-[3] [https://www.hostinger.com](https://www.hostinger.com/ar/tutoriales/renombrar-archivos-linux)
-[4] [https://computernewage.com](https://computernewage.com/2023/03/31/gnu-linux-scripting-bash-ejemplo-6/)
-[5] [https://netwrix.com](https://netwrix.com/es/resources/blog/powershell-rename-file/)
-[6] [https://netwrix.com](https://netwrix.com/es/resources/blog/powershell-rename-file/)
-[7] [https://learn.microsoft.com](https://learn.microsoft.com/es-es/azure/cloud-shell/use-cloud-shell-editor-classic)
-[8] [https://learn.microsoft.com](https://learn.microsoft.com/es-es/azure/cloud-shell/use-the-shell-window-new)
-[9] [https://azure.microsoft.com](https://azure.microsoft.com/es-es/get-started/azure-portal/cloud-shell)
-[10] [https://es.linkedin.com](https://es.linkedin.com/learning/visual-studio-integracion-git-esencial/renombrado-de-archivos-en-la-carpeta-de-un-repositorio-local-a-traves-de-visual-studio)
-[11] [https://help.ubuntu.com](https://help.ubuntu.com/stable/ubuntu-help/files-rename.html.es)
-[12] [https://docs.github.com](https://docs.github.com/es/enterprise-cloud@latest/repositories/working-with-files/managing-files/renaming-a-file)
-
 
 ### ❌ 4. Código duplicado y fuera de contexto  
 Varias secciones están fuera del método asíncrono, lo que rompe la compilación.
@@ -204,6 +162,49 @@ En Cloud Shell o en tu VM:
 dotnet build
 dotnet run
 ```
+---
+---
+
+Para renombrar un archivo en Azure Cloud Shell, el comando exacto depende del entorno que tengas seleccionado en la barra de herramientas de tu consola: Bash (Linux) o PowerShell (Windows). [1] 
+## Si usas el entorno Bash (Linux)
+En Bash debes emplear el comando mv (move), especificando primero el nombre actual del archivo y después el nuevo nombre. [2, 3, 4] 
+
+mv nombre_actual.txt nuevo_nombre.txt
+
+## Si usas el entorno PowerShell
+En PowerShell debes utilizar el cmdlet Rename-Item, o en su defecto el alias estándar ren o move. [5, 6] 
+
+Rename-Item -Path "nombre_actual.txt" -NewName "nuevo_nombre.txt"
+
+(O de forma abreviada: ren nombre_actual.txt nuevo_nombre.txt)
+------------------------------
+## Cómo renombrar desde el editor gráfico de Cloud Shell
+Si prefieres no utilizar comandos de consola, Azure Cloud Shell incluye un editor gráfico integrado: [7, 8] 
+
+   1. Escribe el comando code . en la terminal para desplegar el editor en pantalla.
+   2. En la barra lateral izquierda aparecerá el explorador de archivos.
+   3. Haz clic derecho sobre el archivo que quieres modificar.
+   4. Selecciona la opción Rename (Renombrar), escribe el nuevo nombre y presiona Enter. [7, 9, 10, 11, 12] 
+
+Si necesitas algo más específico, indícame:
+
+* ¿Estás intentando renombrar un archivo local del directorio personal u un objeto dentro de un Azure Storage Account?
+* ¿Te ha aparecido algún mensaje de error al intentar cambiarlo?
+
+
+[1] [https://learn.microsoft.com](https://learn.microsoft.com/es-es/azure/cloud-shell/use-the-shell-window-new)
+[2] [https://www.manageengine.com](https://www.manageengine.com/products/eventlog/kb/linux/how-to-rename-files-in-linux.html)
+[3] [https://www.hostinger.com](https://www.hostinger.com/ar/tutoriales/renombrar-archivos-linux)
+[4] [https://computernewage.com](https://computernewage.com/2023/03/31/gnu-linux-scripting-bash-ejemplo-6/)
+[5] [https://netwrix.com](https://netwrix.com/es/resources/blog/powershell-rename-file/)
+[6] [https://netwrix.com](https://netwrix.com/es/resources/blog/powershell-rename-file/)
+[7] [https://learn.microsoft.com](https://learn.microsoft.com/es-es/azure/cloud-shell/use-cloud-shell-editor-classic)
+[8] [https://learn.microsoft.com](https://learn.microsoft.com/es-es/azure/cloud-shell/use-the-shell-window-new)
+[9] [https://azure.microsoft.com](https://azure.microsoft.com/es-es/get-started/azure-portal/cloud-shell)
+[10] [https://es.linkedin.com](https://es.linkedin.com/learning/visual-studio-integracion-git-esencial/renombrado-de-archivos-en-la-carpeta-de-un-repositorio-local-a-traves-de-visual-studio)
+[11] [https://help.ubuntu.com](https://help.ubuntu.com/stable/ubuntu-help/files-rename.html.es)
+[12] [https://docs.github.com](https://docs.github.com/es/enterprise-cloud@latest/repositories/working-with-files/managing-files/renaming-a-file)
+
 
 ---
 
