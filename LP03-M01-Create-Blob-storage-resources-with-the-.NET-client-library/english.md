@@ -1,6 +1,6 @@
 # LP03 M01: Create Blob storage resources with the .NET client library
 
-[To keep in mind](A tener en cuenta)
+[To keep in mind](https://github.com/Serio120/learning-path-AZ-204/blob/main/LP03-M01-Create-Blob-storage-resources-with-the-.NET-client-library/notes.md#)
 
 In this exercise, you create an Azure Storage account and build a .NET console application using the Azure Storage Blob client library to create containers, upload files to blob storage, list blobs, and download files. You learn how to authenticate with Azure, perform blob storage operations programmatically, and verify results in the Azure portal.
 
