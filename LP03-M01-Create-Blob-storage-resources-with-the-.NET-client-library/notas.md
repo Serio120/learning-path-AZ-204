@@ -211,7 +211,7 @@ Si necesitas algo más específico, indícame:
 
 ---
 
-Para editar código en un archivo .cs (C#) directamente desde Azure Cloud Shell, la herramienta oficial, más rápida y visual es el editor integrado basado en Monaco (el motor de Visual Studio Code). [1] 
+# Para editar código en un archivo .cs (C#) directamente desde Azure Cloud Shell, la herramienta oficial, más rápida y visual es el editor integrado basado en Monaco (el motor de Visual Studio Code). [1] 
 Aquí tienes los pasos exactos y las alternativas disponibles:
 ## Opción 1: El editor integrado (Recomendado)
 Es una interfaz gráfica ligera que se abre dentro de la misma ventana del Cloud Shell. [2] 
@@ -252,4 +252,42 @@ Para ayudarte mejor con tu desarrollo, dime:
 [1] [https://ingenieriadesoftware.es](https://ingenieriadesoftware.es/editor-codigo-online-programa-ide-navegador/)
 [2] [https://azure.microsoft.com](https://azure.microsoft.com/es-es/get-started/azure-portal/cloud-shell)
 [3] [https://learn.microsoft.com](https://learn.microsoft.com/es-es/azure/cloud-shell/use-cloud-shell-editor-new)
+
+# Para borrar un archivo en Azure Cloud Shell, el comando depende nuevamente de si estás utilizando el entorno Bash o PowerShell:
+## Si usas el entorno Bash (Linux)
+Debes utilizar el comando rm (remove):
+
+```bash
+rm archivo.cs
+```
+
+* Para borrar una carpeta vacía: Usa rmdir nombre_carpeta.
+* Para borrar una carpeta con todo su contenido: Usa rm -rf nombre_carpeta (ten cuidado, esta acción es irreversible). [1] 
+
+## Si usas el entorno PowerShell
+Debes utilizar el cmdlet Remove-Item (o sus alias rápidos rm o del):
+
+```powershell
+Remove-Item archivo.cs
+```
+
+* Para borrar una carpeta y todo su contenido: Agrega el parámetro -Recurse, por ejemplo: Remove-Item "nombre_carpeta" -Recurse. [2] 
+
+## Desde el editor gráfico (code)
+Si tienes abierto el editor gráfico integrado con el comando code .:
+
+   1. Busca el archivo en la barra lateral izquierda.
+   2. Haz clic derecho sobre él.
+   3. Selecciona Delete (Eliminar) y confirma la acción. [3] 
+
+Por favor, confírmame lo siguiente para evitar pérdidas accidentales:
+
+* ¿El archivo que quieres borrar es un archivo de código local o es un recurso creado dentro de tu suscripción de Azure?
+* ¿Deseas saber cómo recuperar espacio de almacenamiento en el "Cloud Drive" asociado a tu sesión?
+
+
+[1] [https://learn.microsoft.com](https://learn.microsoft.com/es-es/azure/site-recovery/delete-vault)
+[2] [https://netwrix.com](https://netwrix.com/es/resources/blog/powershell-delete-file/)
+[3] [https://learn.microsoft.com](https://learn.microsoft.com/es-es/azure/backup/manage-azure-managed-disks)
+
 
