@@ -170,6 +170,3 @@ dotnet run
 
 ---
 
-# Would you like us to review the errors you were seeing before fixing them?
-
-I can explain each one so you understand exactly what was wrong.
