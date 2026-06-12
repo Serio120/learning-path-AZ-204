@@ -71,14 +71,18 @@ Select File > New file... and create a file named .env in the project folder.
 
 Open the .env file and add the following code. Replace YOUR_CLIENT_ID, and YOUR_TENANT_ID with the values you recorded earlier.
 
+```
 CLIENT_ID="YOUR_CLIENT_ID"
 TENANT_ID="YOUR_TENANT_ID"
+```
+
 Press ctrl+s to save the file.
 
 Add the starter code for the project
 
 Open the Program.cs file and replace any existing contents with the following code. Be sure to review the comments in the code.
 
+```
 using Microsoft.Graph;
 using Azure.Identity;
 using dotenv.net;
@@ -153,6 +157,7 @@ async Task GetUserProfile(GraphServiceClient graphClient)
         Console.WriteLine($"Error retrieving profile: {ex.Message}");
     }
 }
+```
 Press ctrl+s to save the file.
 
 Run the application
