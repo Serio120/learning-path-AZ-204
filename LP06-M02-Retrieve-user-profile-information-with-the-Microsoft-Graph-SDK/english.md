@@ -1,10 +1,8 @@
-
-
-
-
-
-
 # LP06 M02: Retrieve user profile information with the Microsoft Graph SDK
+
+[To keep in mind](#)
+
+<h2 align="center">******************   Unformatted text *********************</h2>
 
 Retrieve user profile information with the Microsoft Graph SDK
 In this exercise, you create a .NET app to authenticate with Microsoft Entra ID and request an access token, then call the Microsoft Graph API to retrieve and display your user profile information. You learn how to configure permissions and interact with Microsoft Graph from your application.
