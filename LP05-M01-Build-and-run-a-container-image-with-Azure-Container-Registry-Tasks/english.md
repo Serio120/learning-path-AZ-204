@@ -1,6 +1,6 @@
 # LP05 M01: Build and run a container image with Azure Container Registry Tasks
 
-[To keep in mind]()
+[To keep in mind](#)
 
 <h2 align="center">******************   Unformatted text *********************</h2>
 
