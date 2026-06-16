@@ -1,3 +1,11 @@
+
+> PARA SEPARAR CADA PREGUNTA, USAMOS:
+
+> ---
+> ---
+
+
+
 Puedes ver todas las variables que has creado en tu *shell* simplemente **imprimiéndolas** después de definirlas. En Bash, las variables existen en el entorno actual mientras dure la sesión, así que puedes consultarlas con `echo` o usando `declare -p`.
 
 ---
