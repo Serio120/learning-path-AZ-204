@@ -68,6 +68,94 @@ un productor envía mensajes y un consumidor los procesa después, siguiendo FIF
 
 Si quieres, puedo explicarte **cómo enviar y recibir mensajes**, o **cómo crear topics y suscripciones**.
 
+---
+---
+
+# Y que hace este comando:
+
+```userPrincipal=$(az rest --method GET --url https://graph.microsoft.com/v1.0/me --headers 'Content-Type=application/json' --query userPrincipalName --output tsv)```
+
+El comando obtiene **tu User Principal Name (UPN)** desde Microsoft Graph y lo guarda en la variable **`userPrincipal`**.  
+En otras palabras: **pregunta a Microsoft Graph quién eres** y extrae tu nombre de usuario en Azure AD.
+
+---
+
+## 🎯 Respuesta directa
+El comando hace una llamada REST a **Microsoft Graph (`/me`)**, obtiene tu **userPrincipalName** (por ejemplo: *usuario@empresa.com*) y lo guarda en la variable **`userPrincipal`**.
+
+---
+
+## 🧩 Desglose del comando
+
+```bash
+userPrincipal=$(az rest --method GET --url https://graph.microsoft.com/v1.0/me \
+  --headers 'Content-Type=application/json' \
+  --query userPrincipalName --output tsv)
+```
+
+### 🔹 1. **Variable userPrincipal**  
+Se crea una variable de shell llamada **`userPrincipal`** que almacenará el resultado del comando.
+
+---
+
+### 🔹 2. **Llamada a Microsoft Graph**  
+`az rest` permite hacer llamadas REST arbitrarias.  
+Aquí se llama a:
+
+```
+https://graph.microsoft.com/v1.0/me
+```
+
+Ese endpoint devuelve información del **usuario autenticado**.
+
+---
+
+### 🔹 3. **Extracción del userPrincipalName**  
+Con:
+
+```
+--query userPrincipalName
+```
+
+se filtra la respuesta JSON para obtener solo el campo **userPrincipalName**, que suele ser:
+
+```
+nombre.apellido@tuempresa.com
+```
+
+---
+
+### 🔹 4. **Salida en texto plano**
+```
+--output tsv
+```
+
+Hace que el resultado sea texto limpio, sin comillas ni formato JSON.
+
+---
+
+## 📦 Resultado final
+Después de ejecutar el comando, la variable contiene algo así:
+
+```bash
+echo $userPrincipal
+# → usuario@empresa.com
+```
+
+---
+
+## 🧠 ¿Para qué se usa normalmente?
+Este patrón se usa mucho para:
+
+- Obtener el UPN del usuario autenticado en scripts automatizados  
+- Asignar permisos a ese usuario  
+- Registrar aplicaciones o roles en Azure AD  
+- Evitar escribir manualmente el correo del usuario  
+
+---
+
+Si quieres, puedo mostrarte **cómo usar ese UPN para asignar permisos**, o **cómo obtener otros datos del usuario** como su ID de objeto, roles, grupos, etc.
+
 > BY COPILOT MN2021HOT
 
 
