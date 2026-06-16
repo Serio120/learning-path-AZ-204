@@ -68,4 +68,6 @@ un productor envía mensajes y un consumidor los procesa después, siguiendo FIF
 
 Si quieres, puedo explicarte **cómo enviar y recibir mensajes**, o **cómo crear topics y suscripciones**.
 
+> BY COPILOT MN2021HOT
+
 
