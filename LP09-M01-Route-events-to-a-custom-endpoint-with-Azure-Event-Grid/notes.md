@@ -963,6 +963,228 @@ https://evgsite-12345.azurewebsites.net
 
 ---
 
+# student7lnsr [ ~/eventgrid ]$ dotnet build
+Restore complete (0.6s)
+  eventgrid failed with 3 error(s) (0.7s)
+    /home/student7lnsr/eventgrid/Program.cs(42,57): error CS1022: Type or namespace definition, or end-of-file expected
+    /home/student7lnsr/eventgrid/Program.cs(43,33): error CS1022: Type or namespace definition, or end-of-file expected
+    /home/student7lnsr/eventgrid/Program.cs(44,1): error CS1022: Type or namespace definition, or end-of-file expected
+
+Build failed with 3 error(s) in 1.8s
+student7lnsr [ ~/eventgrid ]$
+
+Those three **CS1022** errors almost always mean the C# file has a **brace `{}` problem** or **extra characters after a closing brace**.  
+Your compiler is basically saying: *“I reached a place where only a type, namespace, or end‑of‑file should appear, but I found something else.”*
+
+Let’s fix it cleanly.
+
+---
+
+## ✅ What the error *usually* means
+One of these is happening in your `Program.cs`:
+
+1. **A missing `}`** — your class or namespace never closes.
+2. **An extra `}`** — the file closes early, and the remaining lines are “floating”.
+3. **Code written *outside* of any class or namespace**.
+4. **A stray character** (like `;`, `]`, or text) after the final brace.
+
+---
+
+## 🔍 How to find the problem
+Look at lines **42–44** in `Program.cs`.  
+You’ll likely see something like:
+
+```csharp
+}   // closes class
+}   // closes namespace
+Console.WriteLine("Hello");  // ❌ illegal here
+```
+
+or:
+
+```csharp
+public class Program
+{
+    static void Main()
+    {
+        // ...
+    }
+// ❌ missing closing brace here
+```
+
+---
+
+## ✅ What a correct minimal Program.cs should look like
+
+```csharp
+using System;
+
+namespace eventgrid
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // your code here
+        }
+    }
+}
+```
+
+Make sure your file ends **exactly** with the final `}` and nothing after it.
+
+---
+
+## 🎯 What to do next
+Open `Program.cs`, scroll to the bottom, and check:
+
+- Do the braces match?
+- Is there any code after the last `}`?
+- Is there a stray character or half‑written line?
+
+If you want, paste **lines 30–60** of your `Program.cs` here and I’ll pinpoint the exact issue.
+
+---
+
+---
+
+# Te paso el código del Program.cs:
+
+```
+using dotenv.net; 
+using Azure.Messaging.EventGrid; 
+
+// Load environment variables from .env file
+DotEnv.Load();
+var envVars = DotEnv.Read();
+
+// Start the asynchronous process to send an Event Grid event
+ProcessAsync().GetAwaiter().GetResult();
+
+async Task ProcessAsync()
+{
+        // Retrieve Event Grid topic endpoint and access key from environment variables
+            var topicEndpoint = envVars["TOPIC_ENDPOINT"];
+                var topicKey = envVars["TOPIC_ACCESS_KEY"];
+                    
+                        // Check if the required environment variables are set
+                            if (string.IsNullOrEmpty(topicEndpoint) || string.IsNullOrEmpty(topicKey))
+                                {
+                                            Console.WriteLine("Please set TOPIC_ENDPOINT and TOPIC_ACCESS_KEY in your .env file.");
+                                                    return;
+                                }
+
+                                    // Create an EventGridPublisherClient to send events to the specified topic
+                                        EventGridPublisherClient client = new EventGridPublisherClient        (new Uri(topicEndpoint),
+                                                new Azure.AzureKeyCredential(topicKey));
+                                                
+                                                    // Create a new EventGridEvent with sample data
+                                                        var eventGridEvent = new EventGridEvent(
+                                                                    subject: "ExampleSubject",
+                                                                            eventType: "ExampleEventType",
+                                                                                    dataVersion: "1.0",
+                                                                                            data: new { Message = "Hello, Event Grid!" }
+                                                        );
+
+                                                            // Send the event to Azure Event Grid
+                                                                await client.SendEventAsync(eventGridEvent);
+                                                                    Console.WriteLine("Event sent successfully.");
+}
+                                                        ))
+                                }
+}
+```
+
+¡Perfecto, gracias por pasar el código!  
+El problema está **exactamente al final del archivo**: tienes **paréntesis y llaves extra** que rompen toda la estructura del programa.
+
+Tu archivo termina así:
+
+```
+}
+                                                        ))
+                                }
+}
+```
+
+Eso es **inválido** en C#.  
+Por eso el compilador te lanza:
+
+- *Type or namespace definition, or end-of-file expected*
+
+---
+
+# ✅ Aquí tienes tu `Program.cs` corregido
+
+Este código **compila** y hace exactamente lo que intentas hacer:
+
+```csharp
+using dotenv.net;
+using Azure.Messaging.EventGrid;
+
+// Load environment variables from .env file
+DotEnv.Load();
+var envVars = DotEnv.Read();
+
+// Start the asynchronous process to send an Event Grid event
+await ProcessAsync();
+
+async Task ProcessAsync()
+{
+    // Retrieve Event Grid topic endpoint and access key from environment variables
+    var topicEndpoint = envVars["TOPIC_ENDPOINT"];
+    var topicKey = envVars["TOPIC_ACCESS_KEY"];
+
+    // Check if the required environment variables are set
+    if (string.IsNullOrEmpty(topicEndpoint) || string.IsNullOrEmpty(topicKey))
+    {
+        Console.WriteLine("Please set TOPIC_ENDPOINT and TOPIC_ACCESS_KEY in your .env file.");
+        return;
+    }
+
+    // Create an EventGridPublisherClient to send events to the specified topic
+    EventGridPublisherClient client = new EventGridPublisherClient(
+        new Uri(topicEndpoint),
+        new Azure.AzureKeyCredential(topicKey)
+    );
+
+    // Create a new EventGridEvent with sample data
+    var eventGridEvent = new EventGridEvent(
+        subject: "ExampleSubject",
+        eventType: "ExampleEventType",
+        dataVersion: "1.0",
+        data: new { Message = "Hello, Event Grid!" }
+    );
+
+    // Send the event to Azure Event Grid
+    await client.SendEventAsync(eventGridEvent);
+    Console.WriteLine("Event sent successfully.");
+}
+```
+
+---
+
+# 🔍 ¿Qué errores corregí?
+
+### ❌ Tenías:
+- `))` sueltos
+- `}` de más
+- `}` fuera de lugar
+- Código después del cierre real del archivo
+
+### ✅ Ahora:
+- Todas las llaves están balanceadas
+- No hay paréntesis extra
+- El método `ProcessAsync()` está completo y bien cerrado
+- El archivo termina correctamente
+
+---
+
+# 🎯 ¿Quieres que revise también tu `.csproj` o tu `.env` para asegurar que todo está listo para enviar eventos a Event Grid?
+
+---
+
+---
 
 
 
