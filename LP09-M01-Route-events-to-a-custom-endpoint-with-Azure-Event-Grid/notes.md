@@ -72,3 +72,55 @@ Si quieres, puedo ayudarte a reescribir tu comando para que sea más claro y fá
 
 ---
 ---
+# Que hago con esto? az provider show --namespace Microsoft.EventGrid --query "registrationState"
+
+Ese comando sirve para **comprobar si el proveedor de recursos `Microsoft.EventGrid` está registrado** en tu suscripción de Azure.  
+Si no está registrado, muchos comandos de Event Grid fallan.
+
+---
+
+## 🎯 **Qué hacer con este comando**
+
+Ejecuta:
+
+```bash
+az provider show --namespace Microsoft.EventGrid --query "registrationState"
+```
+
+Y te devolverá algo como:
+
+- `"Registered"`
+- `"NotRegistered"`
+- `"Registering"`
+
+---
+
+## ✅ **Si te devuelve `"Registered"`**
+Perfecto, no tienes que hacer nada más.  
+Puedes seguir creando topics, event subscriptions, etc.
+
+---
+
+## ⚠️ **Si te devuelve `"NotRegistered"`**
+Debes registrar el proveedor:
+
+```bash
+az provider register --namespace Microsoft.EventGrid
+```
+
+Y luego comprobar otra vez:
+
+```bash
+az provider show --namespace Microsoft.EventGrid --query "registrationState"
+```
+
+---
+
+## ⏳ **Si te devuelve `"Registering"`**
+Solo espera unos segundos y vuelve a consultar.  
+El registro suele tardar entre 10 y 60 segundos.
+
+---
+
+Si quieres, puedo ayudarte a verificar otros proveedores necesarios para Event Grid o revisar por qué tu script no está funcionando.
+
