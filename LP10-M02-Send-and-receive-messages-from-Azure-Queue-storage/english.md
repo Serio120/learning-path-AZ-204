@@ -127,6 +127,11 @@ string storageAccountName = "<YOUR-STORAGE-ACCT-NAME>";
 
 3. Press ctrl+s to save your changes.
 
+```bash
+# My Add
+dotnet build
+# Despues de salvar el fichero, para comprobar erores
+
 ### Add code to create a queue client and create a queue
 
 Now it's time to add code to create the queue storage client and create a queue.
