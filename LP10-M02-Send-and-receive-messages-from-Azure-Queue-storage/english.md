@@ -2,8 +2,6 @@
 
 [To keep in mind]()
 
-<h2 align="center">******************   Unformatted text *********************</h2>
-
 >In this exercise, you create and configure Azure Queue Storage resources, then build a .NET app to send and receive messages using the Azure.Storage.Queues SDK. You learn how to provision storage resources, manage queue messages, and clean up your environment when finished.
 
 > Tasks performed in this exercise:
@@ -15,17 +13,17 @@
 
 > This exercise takes approximately 30 minutes to complete.
 
-Create Azure Queue storage resources
+## Create Azure Queue storage resources
 
-In this section of the exercise you create the needed resources in Azure with the Azure CLI.
+> In this section of the exercise you create the needed resources in Azure with the Azure CLI.
 
-In your browser navigate to the Azure portal https://portal.azure.com; signing in with your Azure credentials if prompted.
+1. In your browser navigate to the Azure portal https://portal.azure.com; signing in with your Azure credentials if prompted.
 
-Use the [>_] button to the right of the search bar at the top of the page to create a new cloud shell in the Azure portal, selecting a Bash environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal.
+2. Use the `[>_]` button to the right of the search bar at the top of the page to create a new cloud shell in the Azure portal, selecting a **Bash** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal.
 
-Note: If you have previously created a cloud shell that uses a PowerShell environment, switch it to Bash.
+> **Note:** If you have previously created a cloud shell that uses a **PowerShell** environment, switch it to **Bash**.
 
-In the cloud shell toolbar, in the Settings menu, select Go to Classic version (this is required to use the code editor).
+3. In the cloud shell toolbar, in the Settings menu, select **Go to Classic version** (this is required to use the code editor).
 
 Many of the commands require unique names and use the same parameters. Creating some variables will reduce the changes needed to the commands that create resources. Run the following commands to create the needed variables. Replace myResourceGroup with the name you you're using for this exercise. If you changed the location in the previous step, make the same change in the location variable.
 
