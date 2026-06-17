@@ -131,6 +131,7 @@ string storageAccountName = "<YOUR-STORAGE-ACCT-NAME>";
 # My Add
 dotnet build
 # Despues de salvar el fichero, para comprobar erores
+```
 
 ### Add code to create a queue client and create a queue
 
@@ -138,6 +139,7 @@ Now it's time to add code to create the queue storage client and create a queue.
 
 Locate the // ADD CODE TO CREATE A QUEUE CLIENT AND CREATE A QUEUE comment and add the following code directly after the comment. Be sure to review the code and comments.
 
+```c#
 // Create a DefaultAzureCredentialOptions object to exclude certain credentials
 DefaultAzureCredentialOptions options = new()
 {
@@ -182,7 +184,14 @@ foreach (var message in (await queueClient.PeekMessagesAsync(maxMessages: 10)).V
 
 Console.WriteLine("\nPress Enter to update a message in the queue...");
 Console.ReadLine();
+```
 Press ctrl+s to save the file, then continue with the exercise.
+
+```bash
+# My Add
+dotnet build
+# Despues de salvar el fichero, para comprobar erores
+```
 
 Add code to update a message and list the results
 
