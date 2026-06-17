@@ -192,6 +192,7 @@ Press ctrl+s to save the file, then continue with the exercise.
 dotnet build
 # Despues de salvar el fichero, para comprobar erores
 ```
+<h2 align="center">******************   Unformatted text *********************</h2>
 
 Add code to update a message and list the results
 
