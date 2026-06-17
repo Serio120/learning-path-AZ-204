@@ -103,7 +103,7 @@ code Program.cs
 
 2. Replace any existing contents with the following code. Be sure to review the comments in the code, and replace with the storage account name you recorded earlier.
 
-```bash
+```c#
 using Azure;
 using Azure.Identity;
 using Azure.Storage.Queues;
