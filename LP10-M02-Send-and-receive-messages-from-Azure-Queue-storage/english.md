@@ -25,18 +25,29 @@
 
 3. In the cloud shell toolbar, in the Settings menu, select **Go to Classic version** (this is required to use the code editor).
 
-Many of the commands require unique names and use the same parameters. Creating some variables will reduce the changes needed to the commands that create resources. Run the following commands to create the needed variables. Replace myResourceGroup with the name you you're using for this exercise. If you changed the location in the previous step, make the same change in the location variable.
+<h2 align="center">******************   Unformatted text *********************</h2>
 
+4. Many of the commands require unique names and use the same parameters. Creating some variables will reduce the changes needed to the commands that create resources. Run the following commands to create the needed variables. Replace myResourceGroup with the name you you're using for this exercise. If you changed the location in the previous step, make the same change in the location variable.
+
+```bash
 resourceGroup=LP11M1-ZJJCUTVG1B
 location=eastus
 storAcctName=storactname$RANDOM
-You will need the name assigned to the storage account later in this exercise. Run the following command and record output.
+```
 
+5. You will need the name assigned to the storage account later in this exercise. Run the following command and record output.
+
+```bash
 echo $storAcctName
+```
+
 Run the following command to create a storage account using the variable you created earlier. The operation takes a few minutes to complete.
 
+```bash
 az storage account create --resource-group $resourceGroup\
     --name $storAcctName --location $location --sku Standard_LRS
+```
+
 Assign a role to your Microsoft Entra user name
 
 To allow your app to send and receive messages, assign your Microsoft Entra user to the Storage Queue Data Contributor role. This gives your user account permission to create queues, and send/receive messages using Azure RBAC. Perform the following steps in the cloud shell.
@@ -52,28 +63,36 @@ resourceID=$(az storage account show --resource-group $resourceGroup\
     --name $storAcctName --query id --output tsv)
 Run the following command to create and assign the Storage Queue Data Contributor role.
 
+```bash
 az role assignment create --assignee $userPrincipal\
     --role "Storage Queue Data Contributor"\
     --scope $resourceID
-Create a .NET console app to send and receive messages
+```
+    
+## Create a .NET console app to send and receive messages
 
-Now that the needed resources are deployed to Azure the next step is to set up the console application. The following steps are performed in the cloud shell.
+> Now that the needed resources are deployed to Azure the next step is to set up the console application. The following steps are performed in the cloud shell.
 
-Run the following commands to create a directory to contain the project and change into the project directory.
+1. Run the following commands to create a directory to contain the project and change into the project directory.
 
+```bash
 mkdir queuestor
 cd queuestor
+```
 
-Create the .NET console application.
+2. Create the .NET console application.
 
+```bash
 dotnet new console
+```
+
 Run the following commands to add the Azure.Storage.Queues and Azure.Identity packages to the project.
 
 dotnet add package Azure.Storage.Queues
 dotnet add package Azure.Identity
 Add the starter code for the project
 
-Run the following command in the cloud shell to begin editing the application.
+3. Run the following command in the cloud shell to begin editing the application.
 
 code Program.cs
 Replace any existing contents with the following code. Be sure to review the comments in the code, and replace with the storage account name you recorded earlier.
