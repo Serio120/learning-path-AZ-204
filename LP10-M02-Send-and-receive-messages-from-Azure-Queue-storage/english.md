@@ -4,15 +4,16 @@
 
 <h2 align="center">******************   Unformatted text *********************</h2>
 
-In this exercise, you create and configure Azure Queue Storage resources, then build a .NET app to send and receive messages using the Azure.Storage.Queues SDK. You learn how to provision storage resources, manage queue messages, and clean up your environment when finished.
+>In this exercise, you create and configure Azure Queue Storage resources, then build a .NET app to send and receive messages using the Azure.Storage.Queues SDK. You learn how to provision storage resources, manage queue messages, and clean up your environment when finished.
 
-Tasks performed in this exercise:
+> Tasks performed in this exercise:
 
-Create Azure Queue storage resources
-Assign a role to your Microsoft Entra user name
-Create a .NET console app to send and receive messages
-Clean up resources
-This exercise takes approximately 30 minutes to complete.
+> - Create Azure Queue storage resources
+> - Assign a role to your Microsoft Entra user name
+> - Create a .NET console app to send and receive messages
+> - Clean up resources
+
+> This exercise takes approximately 30 minutes to complete.
 
 Create Azure Queue storage resources
 
