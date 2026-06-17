@@ -86,17 +86,24 @@ cd queuestor
 dotnet new console
 ```
 
-Run the following commands to add the Azure.Storage.Queues and Azure.Identity packages to the project.
+3. Run the following commands to add the Azure.Storage.Queues and Azure.Identity packages to the project.
 
+```bash
 dotnet add package Azure.Storage.Queues
 dotnet add package Azure.Identity
-Add the starter code for the project
+```
 
-3. Run the following command in the cloud shell to begin editing the application.
+### Add the starter code for the project
 
+1. Run the following command in the cloud shell to begin editing the application.
+
+```bash
 code Program.cs
-Replace any existing contents with the following code. Be sure to review the comments in the code, and replace with the storage account name you recorded earlier.
+```
 
+2. Replace any existing contents with the following code. Be sure to review the comments in the code, and replace with the storage account name you recorded earlier.
+
+```bash
 using Azure;
 using Azure.Identity;
 using Azure.Storage.Queues;
@@ -116,9 +123,11 @@ string storageAccountName = "<YOUR-STORAGE-ACCT-NAME>";
 // ADD CODE TO UPDATE A MESSAGE AND LIST MESSAGES
 
 // ADD CODE TO DELETE MESSAGES AND THE QUEUE
-Press ctrl+s to save your changes.
+```
 
-Add code to create a queue client and create a queue
+3. Press ctrl+s to save your changes.
+
+### Add code to create a queue client and create a queue
 
 Now it's time to add code to create the queue storage client and create a queue.
 
